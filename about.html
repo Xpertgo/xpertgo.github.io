@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About XPERTGO - Your Online Tools Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        /* Header - Same as Main Page */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: #1f2937;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #f1f5f9;
+        }
+
+        .nav-links a.active {
+            color: #2563eb;
+        }
+
+        /* About Page Specific Styles */
+        .about-hero {
+            text-align: center;
+            padding: 8rem 5% 4rem;
+            background: linear-gradient(45deg, #2563eb, #3b82f6);
+            color: white;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        .story-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 6rem;
+        }
+
+        .story-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .team-section {
+            margin: 6rem 0;
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #1f2937;
+            color: white;
+            padding: 4rem 5%;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+        }
+
+        .footer-section a {
+            color: #e5e7eb;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.75rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #2563eb;
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .search-bar {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .categories-grid,
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-rocket"></i>
+                XPERTGO
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#about" class="active">About</a>
+                <a href="#tools">Tools</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="about-hero">
+        <h1>Empowering Digital Solutions Since 2025</h1>
+        <p>Your trusted partner in online tools and digital transformation</p>
+    </section>
+
+    <main class="about-content">
+        <section class="story-section">
+            <div class="story-text">
+                <h2>Our Story</h2>
+                <p>Founded in 2025, XPERTGO began as a simple solution to common digital problems. What started as a weekend project between three developers has grown into a platform serving millions of users worldwide. We're driven by our passion for creating tools that make complex tasks simple.</p>
+            </div>
+            <div class="story-image">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Our Journey">
+            </div>
+        </section>
+
+        <section class="values-section">
+            <h2>Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-lock fa-3x"></i>
+                    <h3>Security First</h3>
+                    <p>All user data is encrypted and automatically deleted within 24 hours</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-users fa-3x"></i>
+                    <h3>User Focused</h3>
+                    <p>Every feature is designed based on real user feedback</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-sync-alt fa-3x"></i>
+                    <h3>Continuous Improvement</h3>
+                    <p>Weekly updates with new features and enhancements</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="team-section">
+            <h2>Meet The Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="John Doe">
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Jane Smith">
+                    <h3>Jane Smith</h3>
+                    <p>Lead Developer</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Mike Johnson">
+                    <h3>Mike Johnson</h3>
+                    <p>UX Designer</p>
+                </div>
+            </div>
+        </section> -->
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <a href="index.html"><h4>XPERTGO</h4></a>
+                <p>© 2025 All rights reserved</p>
+                <p>Making complex tasks simple</p>
+            </div>
+            <div class="footer-section">
+                <h4>Products</h4>
+                <a href="#all-tools">All Tools</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#status">System Status</a>
+            </div>
+            <div class="footer-section">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="#careers">Careers</a>
+                <a href="#contact">Contact</a>
+                <a href="#partners">Partners</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="#twitter"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#github"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#blog"><i class="fas fa-blog"></i> Blog</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle (if needed)
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if(mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
