@@ -1,5 +1,3 @@
-<!-- Enhanced footer.html -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <footer class="footer-main bg-dark">
     <div class="container">
         <div class="footer-content pt-5">
@@ -10,7 +8,7 @@
                         <h4 class="footer-title">
                             <span class="text-primary">XPERTGO - MultiTools</span>Pro
                         </h4>
-                        <p class="txt mt-3">
+                        <p class="text-white mt-3">
                             Your one-stop solution for all digital tools. Convert, calculate, optimize, 
                             and analyze with our comprehensive toolkit.
                         </p>
@@ -19,7 +17,7 @@
                                 <i class="fab fa-twitter"></i>
                             </a>
                             <a href="#" class="social-icon">
-                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-facebook-f"></i>
                             </a>
                             <a href="#" class="social-icon">
                                 <i class="fab fa-instagram"></i>
@@ -35,11 +33,11 @@
                 <div class="col-lg-2 col-md-4 mb-4">
                     <h5 class="footer-title">Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="#">Tools List</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Tools List</a></li>
+                        <li><a href="#" class="text-white">Pricing</a></li>
+                        <li><a href="#" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
                     </ul>
                 </div>
 
@@ -47,17 +45,17 @@
                 <div class="col-lg-2 col-md-4 mb-4">
                     <h5 class="footer-title">Legal</h5>
                     <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">Security</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-white">Terms of Service</a></li>
+                        <li><a href="#" class="text-white">Cookie Policy</a></li>
+                        <li><a href="#" class="text-white">Security</a></li>
                     </ul>
                 </div>
 
                 <!-- Newsletter -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <h5 class="footer-title">Newsletter</h5>
-                    <p id="txt">Subscribe to get updates and tool announcements</p>
+                    <p class="text-white">Subscribe to get updates and tool announcements</p>
                     <div class="newsletter-form mt-3">
                         <div class="input-group">
                             <input type="email" class="form-control" placeholder="Enter your email">
@@ -72,7 +70,7 @@
             <div class="footer-bottom border-top pt-4 mt-4">
                 <div class="row">
                     <div class="col-md-6">
-                        <p id="txt mb-0">&copy; 2023 MultiToolsPro. All rights reserved.</p>
+                        <p class="text-white mb-0">&copy; 2023 MultiToolsPro. All rights reserved.</p>
                     </div>
                     <div class="col-md-6 text-end">
                         <img src="payment-icons.png" alt="Payment Methods" class="payment-methods">
@@ -84,9 +82,6 @@
 </footer>
 
 <style>
-    #txt {
-        color: white;
-    }
     .footer-main {
         color: #fff;
         background: #2c3e50;
@@ -121,20 +116,20 @@
     }
 
     .footer-links a {
-        color: #adb5bd;
+        color: #adb5bd !important;
         text-decoration: none;
         transition: all 0.3s ease;
     }
 
     .footer-links a:hover {
-        color: #3498db;
+        color: #3498db !important;
         padding-left: 5px;
     }
 
     .social-icon {
         width: 40px;
         height: 40px;
-        background: rgba(255,255,255,0.1) !important;
+        background: rgba(255,255,255,0.1);
         border-radius: 50%;
         display: inline-flex;
         align-items: center;
@@ -144,16 +139,15 @@
         color: white !important;
         text-decoration: none !important;
     }
-    .social-icon i {
-        color: white !important;
-    }
+
     .social-icon:hover {
-        background: #3498db;
+        background: #3498db !important;
         transform: translateY(-3px);
     }
 
-    .newsletter-form .btn {
-        padding: 0.5rem 1.25rem;
+    .social-icon i {
+        font-size: 1.2rem;
+        color: white !important;
     }
 
     .payment-methods {
@@ -164,11 +158,4 @@
     .footer-bottom {
         border-color: rgba(255,255,255,0.1) !important;
     }
-    .footer-main {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                    url('subtle-bg-pattern.png');
-    background-size: cover;
-    background-position: center;
-}
-
 </style>
