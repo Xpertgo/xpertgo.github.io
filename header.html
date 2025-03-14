@@ -1,0 +1,137 @@
+<!-- Enhanced header.html -->
+<header class="header-main">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="logo-icon">🛠️</span>
+                <span class="logo-text">
+                    MultiTools<span class="logo-highlight">Pro</span>
+                    <small class="tagline">Your Digital Swiss Army Knife</small>
+                </span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-toolbox me-1"></i>Tools
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Image Tools</a></li>
+                            <li><a class="dropdown-item" href="#">SEO Tools</a></li>
+                            <li><a class="dropdown-item" href="#">Developer Tools</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-star me-1"></i>Premium
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-envelope me-1"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="ms-3">
+                    <a href="#" class="btn btn-premium">
+                        <i class="fas fa-crown me-2"></i>Go Premium
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<style>
+    .navbar-brand {
+    animation: slideInLeft 0.5s ease;
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+    .header-main {
+        box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #2c3e50, #3498db);
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-icon {
+        font-size: 2rem;
+        margin-right: 0.75rem;
+    }
+
+    .logo-text {
+        line-height: 1.2;
+    }
+
+    .logo-highlight {
+        color: #f1c40f;
+        font-weight: 700;
+    }
+
+    .tagline {
+        display: block;
+        font-size: 0.65rem;
+        letter-spacing: 1px;
+        opacity: 0.8;
+    }
+
+    .nav-link {
+        position: relative;
+        padding: 0.8rem 1rem !important;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: #f1c40f;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 70%;
+        left: 15%;
+    }
+
+    .btn-premium {
+        background: linear-gradient(45deg, #f1c40f, #e67e22);
+        color: #fff !important;
+        border-radius: 30px;
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+        transition: transform 0.3s ease;
+    }
+
+    .btn-premium:hover {
+        transform: translateY(-2px);
+    }
+</style>

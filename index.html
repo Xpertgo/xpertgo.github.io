@@ -1,494 +1,110 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XPERTGO - Your Ultimate Online Tools Platform</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta name="description" content="All-in-One Toolkit: Converters, Calculators, SEO Tools & More">
+    <title>MultiTools Pro - Your Digital Swiss Army Knife</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-
-        /* Reset CSS */ 
-        .logo a {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-color);
-}
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f8f9fa;
-            line-height: 1.6;
-        }
-
-        /* Enhanced Header Styles */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
+        .tool-card:hover {
+            transform: translateY(-5px);
             transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #2563eb;
+        .ad-unit {
+            background: #f8f9fa;
+            border: 1px dashed #dee2e6;
+            min-height: 100px;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .nav-links a {
-            color: #1f2937;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            background-color: #f1f5f9;
-        }
-
-        .nav-links a.active {
-            color: ##ffffff;
-        }
-
-        .nav-links a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 5px;
-            height: 5px;
-            background-color: #2563eb;
-            border-radius: 50%;
-        }
-
-        .cta-button {
-            background-color: #2563eb;
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #1d4ed8;
-            transform: translateY(-2px);
-        }
-
-        .search-bar {
-            position: relative;
-            margin: 0 2rem;
-            flex: 0 1 400px;
-        }
-
-        .search-bar input {
-            width: 100%;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            border: 1px solid #e5e7eb;
-            background-color: #f8fafc;
-            transition: all 0.3s ease;
-            padding-right: 40px;
-        }
-
-        .search-bar i {
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #64748b;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #1f2937;
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            padding: 0.5rem;
-            min-width: 200px;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            display: block;
-            padding: 0.75rem 1rem;
-            color: #1f2937;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f8fafc;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 8rem 5% 6rem;
-            background: linear-gradient(45deg, #2563eb, #3b82f6);
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-        }
-
-        /* Tools Categories */
-        .categories {
-            padding: 4rem 5%;
-            background-color: #ffffff;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.25rem;
-            color: #1f2937;
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .category-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-
-        .category-card:hover {
-            transform: translateY(-8px);
-        }
-
-        .category-icon {
-            font-size: 2.5rem;
-            color: #2563eb;
-            margin-bottom: 1rem;
-        }
-
-        /* Featured Tools */
-        .featured-tools {
-            padding: 6rem 5%;
-        }
-
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .tool-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tool-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background-color: #2563eb;
-        }
-
-        .tool-card h3 {
-            margin-bottom: 1rem;
-            color: #1f2937;
-            font-size: 1.5rem;
-        }
-
-        .tool-card p {
-            color: #64748b;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1f2937;
-            color: white;
-            padding: 4rem 5%;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 1.5rem;
-            font-size: 1.25rem;
-        }
-
-        .footer-section a {
-            color: #e5e7eb;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.75rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #2563eb;
-        }
-
-        @media (max-width: 1024px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .search-bar {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .categories-grid,
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
+            justify-content: center;
+            margin: 1rem 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="nav-container">
-            <div class="logo">
-                <a href="index.html"></a><i class="fas fa-rocket"></i>
-                XPERTGO
-            </div>
+    <!-- Header injected here -->
+    <div id="header"></div>
 
-            <div class="search-bar">
-                <input type="text" placeholder="Search 100+ tools...">
-                <i class="fas fa-search"></i>
-            </div>
-
-            <div class="nav-links">
-                <div class="dropdown">
-                    <a href="#categories">Categories <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="#pdf-tools"><i class="fas fa-file-pdf"></i> PDF Tools</a>
-                        <a href="#image-tools"><i class="fas fa-image"></i> Image Tools</a>
-                        <a href="#education-tools"><i class="fas fa-calculator"></i> Education</a>
-                        <a href="#developers"><i class="fas fa-code"></i> Developers</a>
-                    </div>
-                </div>
-                <a href="#featured" class="active">Featured</a>
-                <a href="#blog">Blog</a>
-                <a href="#support">Support</a>
-                <a href="#login" class="cta-button">Sign In</a>
-            </div>
-
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Empower Your Workflow with Smart Tools</h1>
-            <p>Instant access to 100+ professional tools for document processing, calculations, conversions, and more</p>
-            <a href="#explore" class="cta-button">Start Exploring →</a>
-        </div>
-    </section>
-
-    <section class="categories">
-        <h2 class="section-title">Popular Tool Categories</h2>
-        <div class="categories-grid">
-            <div class="category-card">
-                <i class="fas fa-file-pdf category-icon"></i>
-                <h3>PDF Tools</h3>
-                <p>Merge, split, compress, and convert PDF documents</p>
-            </div>
-            <div class="category-card">
-                <i class="fas fa-image category-icon"></i>
-                <h3>Image Tools</h3>
-                <p>Edit, convert, and optimize images in any format</p>
-            </div>
-            <div class="category-card">
-                <i class="fas fa-graduation-cap category-icon"></i>
-                <h3>Education</h3>
-                <p>CGPA calculators, converters, and student tools</p>
-            </div>
-            <div class="category-card">
-                <i class="fas fa-code category-icon"></i>
-                <h3>Developers</h3>
-                <p>Encoders, formatters, and debugging tools</p>
+    <main class="container my-5">
+        <!-- Search Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="ad-unit">Ad Space 1 (728x90)</div>
+                <input type="text" id="searchInput" class="form-control form-control-lg" 
+                       placeholder="Search for tools...">
             </div>
         </div>
-    </section>
 
-    <section class="featured-tools">
-        <h2 class="section-title">Featured Tools</h2>
-        <div class="tools-grid">
-            <div class="tool-card">
-                <h3>PDF to Word Converter</h3>
-                <p>Convert PDF files to editable Word documents instantly</p>
-                <a href="#" class="cta-button">Try Now</a>
-            </div>
-            <div class="tool-card">
-                <h3>Image Compressor</h3>
-                <p>Reduce image size without quality loss</p>
-                <a href="#" class="cta-button">Try Now</a>
-            </div>
-            <div class="tool-card">
-                <h3>CGPA Calculator</h3>
-                <p>Calculate your GPA/CGPA with multiple grading systems</p>
-                <a href="#" class="cta-button">Try Now</a>
+        <!-- Tools Grid -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="toolsGrid">
+            <!-- Tools injected by JavaScript -->
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="ad-unit">Ad Space 2 (728x90)</div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <a href="index.html"><h4>XPERTGO</h4></a>
-                <p>© 2025 All rights reserved</p>
-                <p>Making complex tasks simple</p>
-            </div>
-            <div class="footer-section">
-                <h4>Products</h4>
-                <a href="#all-tools">All Tools</a>
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#status">System Status</a>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <a href="about.html">About Us</a>
-                <a href="#careers">Careers</a>
-                <a href="#contact">Contact</a>
-                <a href="#partners">Partners</a>
-            </div>
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <a href="#twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="#linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="#github"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#blog"><i class="fas fa-blog"></i> Blog</a>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer injected here -->
+    <div id="footer"></div>
 
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            const isOpen = navLinks.style.display === 'flex';
-            navLinks.style.display = isOpen ? 'none' : 'flex';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '100%';
-            navLinks.style.left = '0';
-            navLinks.style.right = '0';
-            navLinks.style.background = 'white';
-            navLinks.style.padding = '2rem';
-            navLinks.style.gap = '1.5rem';
-            navLinks.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.1)';
-        });
+        // Dynamic Header/Footer Inclusion
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load header
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header').innerHTML = data);
 
-        // Active Link Detection
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                document.querySelectorAll('.nav-links a').forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
+            // Load footer
+            fetch('footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer').innerHTML = data);
+
+            // Initialize tools
+            const tools = [
+                { name: 'Image Converter', category: 'Image Tools', url: '#', icon: '🖼️' },
+                { name: 'PDF Compressor', category: 'Document Tools', url: '#', icon: '📄' },
+                { name: 'BMI Calculator', category: 'Calculators', url: '#', icon: '🧮' },
+                { name: 'SEO Analyzer', category: 'SEO Tools', url: '#', icon: '🔍' },
+                { name: 'JSON Formatter', category: 'Developer Tools', url: '#', icon: '💻' },
+                { name: 'Currency Converter', category: 'Unit Converters', url: '#', icon: '💱' }
+            ];
+
+            const toolsGrid = document.getElementById('toolsGrid');
+            
+            function renderTools(filteredTools = tools) {
+                toolsGrid.innerHTML = filteredTools.map(tool => `
+                    <div class="col">
+                        <div class="card tool-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">${tool.icon} ${tool.name}</h5>
+                                <p class="card-text text-muted">${tool.category}</p>
+                                <a href="${tool.url}" class="btn btn-primary">Use Tool</a>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            // Initial render
+            renderTools();
+
+            // Search functionality
+            document.getElementById('searchInput').addEventListener('input', function(e) {
+                const searchTerm = e.target.value.toLowerCase();
+                const filtered = tools.filter(tool => 
+                    tool.name.toLowerCase().includes(searchTerm) ||
+                    tool.category.toLowerCase().includes(searchTerm)
+                );
+                renderTools(filtered);
             });
         });
-
-        // Header Scroll Effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            header.style.boxShadow = window.scrollY > 50 ? '0 4px 20px rgba(0, 0, 0, 0.1)' : 'none';
-        });
-
-        // // Close Mobile Menu on Click Outside
-        // document.addEventListener('click', (e) => {
-        //     if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-        //         navLinks.style.display = 'none';
-        //     }
-        // });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
