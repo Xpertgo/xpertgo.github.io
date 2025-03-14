@@ -3,318 +3,283 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About XPERTGO - Your Online Tools Partner</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>About Us - MultiTools Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f8f9fa;
-            line-height: 1.6;
-        }
-
-        /* Header - Same as Main Page */
-        header {
+        /* Header Styles */
+        .header-main {
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 5%;
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+        }
+
+        .navbar-brand {
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.8rem;
+        .logo-icon {
+            font-size: 2rem;
+            margin-right: 0.75rem;
+        }
+
+        .logo-text {
+            line-height: 1.2;
+        }
+
+        .logo-highlight {
+            color: #f1c40f;
             font-weight: 700;
-            color: #2563eb;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
+        .tagline {
+            display: block;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            opacity: 0.8;
         }
 
-        .nav-links a {
-            color: #1f2937;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
+        .nav-link {
+            position: relative;
+            padding: 0.8rem 1rem !important;
             transition: all 0.3s ease;
         }
 
-        .nav-links a:hover {
-            background-color: #f1f5f9;
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #f1c40f;
+            transition: all 0.3s ease;
         }
 
-        .nav-links a.active {
-            color: #2563eb;
+        .nav-link:hover::after {
+            width: 70%;
+            left: 15%;
         }
 
-        /* About Page Specific Styles */
+        .btn-premium {
+            background: linear-gradient(45deg, #f1c40f, #e67e22);
+            color: #fff !important;
+            border-radius: 30px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        /* About Page Styles */
         .about-hero {
-            text-align: center;
-            padding: 8rem 5% 4rem;
-            background: linear-gradient(45deg, #2563eb, #3b82f6);
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(52, 152, 219, 0.9)),
+                        url('https://source.unsplash.com/random/1920x600/?technology');
+            background-size: cover;
+            background-position: center;
             color: white;
+            padding: 100px 0;
+            margin-top: 80px;
         }
 
-        .about-content {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 5%;
+        .team-member-card {
+            transition: transform 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .story-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 6rem;
+        .team-member-card:hover {
+            transform: translateY(-10px);
         }
 
-        .story-image img {
-            width: 100%;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        .section-title {
+            position: relative;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
         }
 
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #3498db;
         }
 
-        .value-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        .timeline {
+            position: relative;
+            padding: 40px 0;
         }
 
-        .team-section {
-            margin: 6rem 0;
-            text-align: center;
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 40px;
         }
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .team-member img {
-            width: 150px;
-            height: 150px;
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: #3498db;
             border-radius: 50%;
-            margin-bottom: 1rem;
-            object-fit: cover;
         }
 
-        footer {
-            background-color: #1f2937;
-            color: white;
-            padding: 4rem 5%;
-            margin-top: 4rem;
+        .faq-card {
+            border: none;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 1.5rem;
-            font-size: 1.25rem;
-        }
-
-        .footer-section a {
-            color: #e5e7eb;
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.75rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: #2563eb;
-        }
-
-        @media (max-width: 1024px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .search-bar {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .categories-grid,
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
+        .contact-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-rocket"></i>
-                XPERTGO
-            </a>
+    <!-- Header -->
+    <header class="header-main">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <span class="logo-icon">🛠️</span>
+                    <span class="logo-text">
+                        MultiTools<span class="logo-highlight">Pro</span>
+                        <small class="tagline">Your Digital Swiss Army Knife</small>
+                    </span>
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="#about" class="active">About</a>
-                <a href="#tools">Tools</a>
-                <a href="#contact">Contact</a>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="ms-3">
+                        <a href="#" class="btn btn-premium">
+                            <i class="fas fa-crown me-2"></i>Go Premium
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
-    <section class="about-hero">
-        <h1>Empowering Digital Solutions Since 2025</h1>
-        <p>Your trusted partner in online tools and digital transformation</p>
-    </section>
-
-    <main class="about-content">
-        <section class="story-section">
-            <div class="story-text">
-                <h2>Our Story</h2>
-                <p>Founded in 2025, XPERTGO began as a simple solution to common digital problems. What started as a weekend project between three developers has grown into a platform serving millions of users worldwide. We're driven by our passion for creating tools that make complex tasks simple.</p>
-            </div>
-            <div class="story-image">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Our Journey">
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="about-hero text-center">
+            <div class="container">
+                <h1 class="display-4 mb-4">About MultiTools Pro</h1>
+                <p class="lead">Empowering users worldwide with essential digital tools</p>
             </div>
         </section>
 
-        <section class="values-section">
-            <h2>Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <i class="fas fa-lock fa-3x"></i>
-                    <h3>Security First</h3>
-                    <p>All user data is encrypted and automatically deleted within 24 hours</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-users fa-3x"></i>
-                    <h3>User Focused</h3>
-                    <p>Every feature is designed based on real user feedback</p>
-                </div>
-                <div class="value-card">
-                    <i class="fas fa-sync-alt fa-3x"></i>
-                    <h3>Continuous Improvement</h3>
-                    <p>Weekly updates with new features and enhancements</p>
+        <!-- Our Story -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 class="section-title">Our Story</h2>
+                        <p class="lead">Founded in 2020, MultiTools Pro started as a simple collection of utilities for developers. Today, we've grown into a comprehensive platform serving millions of users worldwide with over 50 specialized tools.</p>
+                        <p>Our mission is to simplify digital tasks through intuitive, powerful tools that anyone can use. Whether you're a professional developer or a small business owner, we've got the tools you need to succeed in the digital world.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="https://unsplash.com/photos/team-of-competent-financial-analysts-gathering-together-at-boardroom-for-brainstorming-multiracial-men-and-women-in-formal-clothes-discussing-business-plan-of-common-project-k1h88b_WXFs" alt="Our Team" class="img-fluid rounded-3">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section class="team-section">
-            <h2>Meet The Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="John Doe">
-                    <h3>John Doe</h3>
-                    <p>CEO & Founder</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Jane Smith">
-                    <h3>Jane Smith</h3>
-                    <p>Lead Developer</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Mike Johnson">
-                    <h3>Mike Johnson</h3>
-                    <p>UX Designer</p>
+        <!-- Team Section -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-title text-center">Meet the Team</h2>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card team-member-card h-100">
+                            <img src="https://unsplash.com/photos/mans-grey-and-black-shirt-ILip77SbmOEn" class="card-img-top" alt="Team Member">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">John Doe</h5>
+                                <p class="text-muted">CEO & Founder</p>
+                                <div class="social-links">
+                                    <a href="#" class="text-primary mx-2"><i class="fab fa-linkedin"></i></a>
+                                    <a href="#" class="text-primary mx-2"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more team members -->
                 </div>
             </div>
-        </section> -->
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center">Our Values</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0">
+                            <div class="card-body text-center">
+                                <i class="fas fa-rocket fa-3x text-primary mb-3"></i>
+                                <h5>Innovation</h5>
+                                <p>Constantly developing new tools and improving existing ones</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more value cards -->
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <a href="index.html"><h4>XPERTGO</h4></a>
-                <p>© 2025 All rights reserved</p>
-                <p>Making complex tasks simple</p>
+    <!-- Footer -->
+    <footer class="footer-main bg-dark text-white">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: support@multitools.pro</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-2">Twitter</a>
+                        <a href="#" class="text-white me-2">Facebook</a>
+                        <a href="#" class="text-white">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="ad-unit">Footer Ad (300x250)</div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h4>Products</h4>
-                <a href="#all-tools">All Tools</a>
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#status">System Status</a>
-            </div>
-            <div class="footer-section">
-                <h4>Company</h4>
-                <a href="about.html">About Us</a>
-                <a href="#careers">Careers</a>
-                <a href="#contact">Contact</a>
-                <a href="#partners">Partners</a>
-            </div>
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <a href="#twitter"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="#linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="#github"><i class="fab fa-github"></i> GitHub</a>
-                <a href="#blog"><i class="fas fa-blog"></i> Blog</a>
+            <div class="text-center mt-4">
+                <p>&copy; 2023 XPERTGO - MultiTools Pro. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile Menu Toggle (if needed)
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        
-        if(mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            });
-        }
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
