@@ -98,18 +98,19 @@
 <style>
 :root {
     --primary: #3498db;
-    --secondary: #2d3e4f;
-    --text: #f8f9fa;
-    --muted: #95a5a6;
+    --secondary: #1a1a1a;
+    --text: #ffffff;
+    --muted: #b3b3b3;
+    --form-bg: #2d2d2d;
+    --form-text: #ffffff;
     --transition: all 0.25s ease;
 }
 
-/* Base Styling */
 .footer-main {
     background: var(--secondary);
     color: var(--text);
-    padding: 4rem 0 1rem;
-    position: relative;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .container {
@@ -118,7 +119,6 @@
     padding: 0 1.5rem;
 }
 
-/* Content Spacing */
 .footer-content {
     padding: 2rem 0;
 }
@@ -148,7 +148,6 @@
     margin-bottom: 1.5rem;
 }
 
-/* Links Styling */
 .footer-links {
     list-style: none;
     padding: 0;
@@ -171,13 +170,6 @@
     padding-left: 8px;
 }
 
-.footer-links a:hover::before {
-    content: "→";
-    position: absolute;
-    left: -12px;
-}
-
-/* Social Icons */
 .social-links {
     display: flex;
     gap: 1rem;
@@ -188,7 +180,7 @@
     width: 38px;
     height: 38px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,7 +194,6 @@
     transform: translateY(-2px);
 }
 
-/* Newsletter Form */
 .newsletter-form {
     margin-top: 1.5rem;
 }
@@ -216,14 +207,21 @@
 .form-control {
     flex: 1;
     padding: 0.8rem 1rem;
-    border: none;
+    border: 1px solid #404040;
     border-radius: 6px;
-    background: rgba(255, 255, 255, 0.08) !important; 
-    color: var(--text);
+    background: var(--form-bg);
+    color: var(--form-text);
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
 }
 
 .btn-primary {
     background: var(--primary);
+    color: white;
     border: none;
     padding: 0.8rem 1.5rem;
     border-radius: 6px;
@@ -241,7 +239,6 @@
     font-size: 0.9rem;
 }
 
-/* Footer Bottom */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
@@ -277,7 +274,6 @@
     color: var(--primary);
 }
 
-/* Responsive Fixes */
 @media (max-width: 768px) {
     .container {
         padding: 0 1rem;
@@ -291,19 +287,13 @@
         padding-left: 0;
     }
 
-    .footer-links a:hover::before {
-        display: none;
-    }
-
     .input-group {
         flex-direction: column;
     }
 
     .btn-primary {
         width: 100%;
-    }
-    .form-control {
-        width: 100%;
+        padding: 1rem !important;
     }
 
     .legal-links {
@@ -313,15 +303,14 @@
     }
 
     .branding {
-        justify-content: center;
-        text-align: center;
         flex-direction: column;
+        text-align: center;
     }
-}
 
-@media (min-width: 1200px) {
-    .container {
-        padding: 0;
+    .newsletter-form {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 1.5rem;
+        border-radius: 12px;
     }
 }
 </style>
