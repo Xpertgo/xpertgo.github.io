@@ -1,6 +1,6 @@
-<footer class="footer-main bg-dark">
+<footer class="footer-main">
     <div class="container">
-        <div class="footer-content pt-5">
+        <div class="footer-content">
             <div class="row g-4">
                 <!-- About Column -->
                 <div class="col-lg-4 col-md-6">
@@ -8,11 +8,11 @@
                         <h4 class="footer-title">
                             <span class="text-primary">XPERTGO</span> MultiTools Pro
                         </h4>
-                        <p class="text-white mt-3 opacity-85">
+                        <p class="footer-text">
                             Your ultimate digital toolkit for conversion, optimization, 
                             and data analysis. Powering professionals worldwide.
                         </p>
-                        <div class="social-links mt-4">
+                        <div class="social-links">
                             <a href="#" class="social-icon">
                                 <i class="fab fa-twitter"></i>
                             </a>
@@ -33,11 +33,11 @@
                 <div class="col-lg-2 col-md-6">
                     <h5 class="footer-title">Solutions</h5>
                     <ul class="footer-links">
-                        <li><a href="#" class="text-white">Developer API</a></li>
-                        <li><a href="#" class="text-white">Premium Tools</a></li>
-                        <li><a href="#" class="text-white">Batch Processing</a></li>
-                        <li><a href="#" class="text-white">Team Plans</a></li>
-                        <li><a href="#" class="text-white">Custom Workflows</a></li>
+                        <li><a href="#">Developer API</a></li>
+                        <li><a href="#">Premium Tools</a></li>
+                        <li><a href="#">Batch Processing</a></li>
+                        <li><a href="#">Team Plans</a></li>
+                        <li><a href="#">Custom Workflows</a></li>
                     </ul>
                 </div>
 
@@ -45,48 +45,48 @@
                 <div class="col-lg-2 col-md-6">
                     <h5 class="footer-title">Resources</h5>
                     <ul class="footer-links">
-                        <li><a href="#" class="text-white">Documentation</a></li>
-                        <li><a href="#" class="text-white">Tutorials</a></li>
-                        <li><a href="#" class="text-white">Case Studies</a></li>
-                        <li><a href="#" class="text-white">Status</a></li>
-                        <li><a href="#" class="text-white">Support</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">Support</a></li>
                     </ul>
                 </div>
 
                 <!-- Newsletter -->
                 <div class="col-lg-4 col-md-6">
                     <h5 class="footer-title">Stay Updated</h5>
-                    <p class="text-white opacity-85">Get exclusive tool updates and productivity insights</p>
-                    <div class="newsletter-form mt-3">
+                    <p class="footer-text">Get exclusive tool updates and productivity insights</p>
+                    <div class="newsletter-form">
                         <div class="input-group">
                             <input type="email" class="form-control" placeholder="work@email.com">
                             <button class="btn btn-primary">
                                 <span class="d-none d-md-inline">Subscribe</span>
-                                <i class="fas fa-arrow-right ms-2"></i>
+                                <i class="fas fa-arrow-right"></i>
                             </button>
                         </div>
-                        <div class="form-text text-white opacity-75 mt-2">
+                        <div class="form-text">
                             We respect your privacy. Unsubscribe anytime.
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-bottom border-top pt-4 mt-5">
+            <div class="footer-bottom">
                 <div class="row align-items-center">
                     <div class="col-md-6 mb-3 mb-md-0">
-                        <div class="d-flex gap-3 align-items-center">
+                        <div class="branding">
                             <img src="logo-icon.svg" alt="Logo" width="40">
-                            <p class="text-white mb-0">
-                                &copy; 2023 MultiTools Pro. <span class="d-none d-lg-inline">All rights reserved.</span>
+                            <p class="copyright">
+                                &copy; 2023 MultiTools Pro. All rights reserved.
                             </p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="d-flex gap-3 justify-content-md-end">
-                            <a href="#" class="text-white opacity-75">Privacy Policy</a>
-                            <a href="#" class="text-white opacity-75">Terms of Service</a>
-                            <a href="#" class="text-white opacity-75">GDPR</a>
+                        <div class="legal-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms of Service</a>
+                            <a href="#">GDPR</a>
                         </div>
                     </div>
                 </div>
@@ -98,211 +98,227 @@
 <style>
 :root {
     --primary: #3498db;
-    --secondary: #2c3e50;
-    --accent: #e74c3c;
+    --secondary: #2d3e4f;
     --text: #f8f9fa;
-    --muted: #adb5bd;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --muted: #95a5a6;
+    --transition: all 0.25s ease;
 }
 
+/* Base Styling */
 .footer-main {
     background: var(--secondary);
     color: var(--text);
-    padding: 6rem 0 2rem;
+    padding: 4rem 0 1rem;
     position: relative;
-    overflow: hidden;
-}
-
-.footer-main::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 50% 50%, 
-        rgba(52, 152, 219, 0.1) 0%, 
-        rgba(44, 62, 80, 0.95) 100%);
-    z-index: 0;
 }
 
 .container {
-    position: relative;
-    z-index: 1;
-    max-width: 1440px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+}
+
+/* Content Spacing */
+.footer-content {
+    padding: 2rem 0;
 }
 
 .footer-title {
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin-bottom: 1.75rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--text);
     position: relative;
-    font-size: 1.25rem;
+    padding-bottom: 0.75rem;
 }
 
 .footer-title::after {
     content: '';
     position: absolute;
-    bottom: -0.75rem;
+    bottom: 0;
     left: 0;
     width: 40px;
-    height: 3px;
+    height: 2px;
     background: var(--primary);
-    border-radius: 2px;
-    transition: var(--transition);
+}
+
+.footer-text {
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Links Styling */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-links li {
-    margin-bottom: 0.875rem;
-    opacity: 0.9;
-    transform: translateX(0);
-    transition: var(--transition);
-}
-
-.footer-links li:hover {
-    opacity: 1;
-    transform: translateX(8px);
+    margin-bottom: 0.8rem;
 }
 
 .footer-links a {
-    color: var(--muted) !important;
+    color: var(--muted);
     text-decoration: none;
-    position: relative;
-    padding: 0.25rem 0;
-    display: inline-block;
-}
-
-.footer-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--primary);
     transition: var(--transition);
+    position: relative;
 }
 
-.footer-links a:hover::after {
-    width: 100%;
+.footer-links a:hover {
+    color: var(--primary);
+    padding-left: 8px;
 }
 
+.footer-links a:hover::before {
+    content: "→";
+    position: absolute;
+    left: -12px;
+}
+
+/* Social Icons */
 .social-links {
     display: flex;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .social-icon {
-    width: 44px;
-    height: 44px;
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
     background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(4px);
-    border-radius: 12px;
-    transition: var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text);
+    color: var(--muted);
+    transition: var(--transition);
 }
 
 .social-icon:hover {
     background: var(--primary);
-    transform: translateY(-3px) rotate(5deg);
-    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3);
+    color: white;
+    transform: translateY(-2px);
 }
 
-.newsletter-form .form-control {
+/* Newsletter Form */
+.newsletter-form {
+    margin-top: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    flex: 1;
+    padding: 0.8rem 1rem;
     border: none;
-    border-radius: 12px;
-    padding: 1rem 1.5rem;
+    border-radius: 6px;
     background: rgba(255, 255, 255, 0.08);
     color: var(--text);
-    transition: var(--transition);
 }
 
-.newsletter-form .form-control:focus {
-    background: rgba(255, 255, 255, 0.12);
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
-}
-
-.newsletter-form .btn {
-    border-radius: 12px;
-    padding: 1rem 2rem;
-    font-weight: 600;
+.btn-primary {
     background: var(--primary);
     border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
     transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+}
+
+.form-text {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 2rem;
+    margin-top: 3rem;
+}
+
+.branding {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
-.newsletter-form .btn:hover {
-    background: #2980b9;
-    transform: translateY(-2px) scale(1.02);
+.copyright {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.9rem;
 }
 
-.footer-bottom {
-    border-color: rgba(255, 255, 255, 0.1) !important;
-    margin-top: 4rem;
-    padding-top: 2rem;
-    backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 16px;
-    padding: 1.5rem;
+.legal-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
 }
 
-@media (max-width: 767px) {
-    .footer-main {
-        text-align: center;
-        padding: 4rem 0;
+.legal-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.legal-links a:hover {
+    color: var(--primary);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
     }
 
-    .footer-title::after {
-        left: 50%;
-        transform: translateX(-50%);
+    .footer-title {
+        margin-top: 2rem;
     }
 
-    .social-links {
-        justify-content: center;
+    .footer-links a:hover {
+        padding-left: 0;
     }
 
-    .newsletter-form .input-group {
+    .footer-links a:hover::before {
+        display: none;
+    }
+
+    .input-group {
         flex-direction: column;
+    }
+
+    .btn-primary {
+        width: 100%;
+    }
+
+    .legal-links {
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 1rem;
     }
 
-    .newsletter-form .btn {
-        width: 100%;
+    .branding {
         justify-content: center;
-    }
-
-    .footer-bottom {
         text-align: center;
+        flex-direction: column;
     }
 }
 
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+@media (min-width: 1200px) {
+    .container {
+        padding: 0;
     }
 }
-
-.footer-content > * {
-    animation: slideUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-    opacity: 0;
-}
-
-.footer-content > *:nth-child(1) { animation-delay: 0.1s; }
-.footer-content > *:nth-child(2) { animation-delay: 0.2s; }
-.footer-content > *:nth-child(3) { animation-delay: 0.3s; }
-.footer-content > *:nth-child(4) { animation-delay: 0.4s; }
 </style>
