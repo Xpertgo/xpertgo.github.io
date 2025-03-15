@@ -1,16 +1,16 @@
 <footer class="footer-main bg-dark">
     <div class="container">
         <div class="footer-content pt-5">
-            <div class="row">
+            <div class="row g-4">
                 <!-- About Column -->
-                <div class="col-lg-4 mb-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="footer-about">
                         <h4 class="footer-title">
-                            <span class="text-primary">XPERTGO - MultiTools</span>Pro
+                            <span class="text-primary">XPERTGO</span> MultiTools Pro
                         </h4>
-                        <p class="text-white mt-3">
-                            Your one-stop solution for all digital tools. Convert, calculate, optimize, 
-                            and analyze with our comprehensive toolkit.
+                        <p class="text-white mt-3 opacity-85">
+                            Your ultimate digital toolkit for conversion, optimization, 
+                            and data analysis. Powering professionals worldwide.
                         </p>
                         <div class="social-links mt-4">
                             <a href="#" class="social-icon">
@@ -30,50 +30,64 @@
                 </div>
 
                 <!-- Quick Links -->
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h5 class="footer-title">Quick Links</h5>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Solutions</h5>
                     <ul class="footer-links">
-                        <li><a href="about.html" class="text-white">About Us</a></li>
-                        <li><a href="#" class="text-white">Tools List</a></li>
-                        <li><a href="#" class="text-white">Pricing</a></li>
-                        <li><a href="#" class="text-white">Blog</a></li>
-                        <li><a href="#" class="text-white">Contact</a></li>
+                        <li><a href="#" class="text-white">Developer API</a></li>
+                        <li><a href="#" class="text-white">Premium Tools</a></li>
+                        <li><a href="#" class="text-white">Batch Processing</a></li>
+                        <li><a href="#" class="text-white">Team Plans</a></li>
+                        <li><a href="#" class="text-white">Custom Workflows</a></li>
                     </ul>
                 </div>
 
-                <!-- Legal -->
-                <div class="col-lg-2 col-md-4 mb-4">
-                    <h5 class="footer-title">Legal</h5>
+                <!-- Resources -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Resources</h5>
                     <ul class="footer-links">
-                        <li><a href="#" class="text-white">Privacy Policy</a></li>
-                        <li><a href="#" class="text-white">Terms of Service</a></li>
-                        <li><a href="#" class="text-white">Cookie Policy</a></li>
-                        <li><a href="#" class="text-white">Security</a></li>
+                        <li><a href="#" class="text-white">Documentation</a></li>
+                        <li><a href="#" class="text-white">Tutorials</a></li>
+                        <li><a href="#" class="text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-white">Status</a></li>
+                        <li><a href="#" class="text-white">Support</a></li>
                     </ul>
                 </div>
 
                 <!-- Newsletter -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <h5 class="footer-title">Newsletter</h5>
-                    <p class="text-white">Subscribe to get updates and tool announcements</p>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-title">Stay Updated</h5>
+                    <p class="text-white opacity-85">Get exclusive tool updates and productivity insights</p>
                     <div class="newsletter-form mt-3">
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <input type="email" class="form-control" placeholder="work@email.com">
                             <button class="btn btn-primary">
-                                <i class="fas fa-paper-plane"></i>
+                                <span class="d-none d-md-inline">Subscribe</span>
+                                <i class="fas fa-arrow-right ms-2"></i>
                             </button>
+                        </div>
+                        <div class="form-text text-white opacity-75 mt-2">
+                            We respect your privacy. Unsubscribe anytime.
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-bottom border-top pt-4 mt-4">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p class="text-white mb-0">&copy; 2023 MultiToolsPro. All rights reserved.</p>
+            <div class="footer-bottom border-top pt-4 mt-5">
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img src="logo-icon.svg" alt="Logo" width="40">
+                            <p class="text-white mb-0">
+                                &copy; 2023 MultiTools Pro. <span class="d-none d-lg-inline">All rights reserved.</span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-md-6 text-md-end">
-                        <img src="payment-icons.png" alt="Payment Methods" class="payment-methods">
+                    <div class="col-md-6">
+                        <div class="d-flex gap-3 justify-content-md-end">
+                            <a href="#" class="text-white opacity-75">Privacy Policy</a>
+                            <a href="#" class="text-white opacity-75">Terms of Service</a>
+                            <a href="#" class="text-white opacity-75">GDPR</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -82,125 +96,213 @@
 </footer>
 
 <style>
+:root {
+    --primary: #3498db;
+    --secondary: #2c3e50;
+    --accent: #e74c3c;
+    --text: #f8f9fa;
+    --muted: #adb5bd;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-main {
+    background: var(--secondary);
+    color: var(--text);
+    padding: 6rem 0 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-main::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, 
+        rgba(52, 152, 219, 0.1) 0%, 
+        rgba(44, 62, 80, 0.95) 100%);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-title {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.75rem;
+    position: relative;
+    font-size: 1.25rem;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.75rem;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.footer-links li {
+    margin-bottom: 0.875rem;
+    opacity: 0.9;
+    transform: translateX(0);
+    transition: var(--transition);
+}
+
+.footer-links li:hover {
+    opacity: 1;
+    transform: translateX(8px);
+}
+
+.footer-links a {
+    color: var(--muted) !important;
+    text-decoration: none;
+    position: relative;
+    padding: 0.25rem 0;
+    display: inline-block;
+}
+
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--primary);
+    transition: var(--transition);
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+}
+
+.social-icon:hover {
+    background: var(--primary);
+    transform: translateY(-3px) rotate(5deg);
+    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3);
+}
+
+.newsletter-form .form-control {
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.newsletter-form .form-control:focus {
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+}
+
+.newsletter-form .btn {
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    background: var(--primary);
+    border: none;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.newsletter-form .btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px) scale(1.02);
+}
+
+.footer-bottom {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+@media (max-width: 767px) {
     .footer-main {
-        color: #fff;
-        background: #2c3e50;
-        padding-top: 4rem;
-    }
-
-    .footer-main .container {
-        padding-left: 0;
-        padding-right: 0;
-        max-width: 100%;
-    }
-
-    .footer-title {
-        color: #f8f9fa;
-        font-weight: 600;
-        margin-bottom: 1.5rem;
-        position: relative;
-        padding-bottom: 0.5rem;
+        text-align: center;
+        padding: 4rem 0;
     }
 
     .footer-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 40px;
-        height: 2px;
-        background: #3498db;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .footer-links {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    .footer-links li {
-        margin-bottom: 0.75rem;
-    }
-
-    .footer-links a {
-        color: #adb5bd !important;
-        text-decoration: none;
-        transition: all 0.3s ease;
-    }
-
-    .footer-links a:hover {
-        color: #3498db !important;
-        padding-left: 5px;
-    }
-
-    .social-icon {
-        width: 40px;
-        height: 40px;
-        background: rgba(255,255,255,0.1);
-        border-radius: 50%;
-        display: inline-flex;
-        align-items: center;
+    .social-links {
         justify-content: center;
-        margin-right: 0.5rem;
-        transition: all 0.3s ease;
-        color: white !important;
-        text-decoration: none !important;
     }
 
-    .social-icon:hover {
-        background: #3498db !important;
-        transform: translateY(-3px);
+    .newsletter-form .input-group {
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .payment-methods {
-        height: 30px;
-        opacity: 0.8;
+    .newsletter-form .btn {
+        width: 100%;
+        justify-content: center;
     }
 
     .footer-bottom {
-        border-color: rgba(255,255,255,0.1) !important;
+        text-align: center;
     }
+}
 
-    @media (min-width: 768px) {
-        .footer-main [class*="col-"] {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        
-        .footer-main .row {
-            margin-left: -15px;
-            margin-right: -15px;
-        }
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
     }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-    @media (max-width: 767px) {
-        .footer-main {
-            text-align: center;
-        }
-        
-        .footer-title::after {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .social-links {
-            justify-content: center !important;
-        }
-        
-        .newsletter-form .input-group {
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .newsletter-form .btn {
-            width: 100%;
-        }
-        
-        .footer-bottom .col-md-6 {
-            text-align: center !important;
-        }
-        
-        .payment-methods {
-            margin-top: 1rem;
-        }
-    }
+.footer-content > * {
+    animation: slideUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    opacity: 0;
+}
+
+.footer-content > *:nth-child(1) { animation-delay: 0.1s; }
+.footer-content > *:nth-child(2) { animation-delay: 0.2s; }
+.footer-content > *:nth-child(3) { animation-delay: 0.3s; }
+.footer-content > *:nth-child(4) { animation-delay: 0.4s; }
 </style>
