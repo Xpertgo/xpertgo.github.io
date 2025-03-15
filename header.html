@@ -55,13 +55,13 @@
 
 <style>
     .navbar-brand {
-    animation: slideInLeft 0.5s ease;
-}
+        animation: slideInLeft 0.5s ease;
+    }
 
-@keyframes slideInLeft {
-    from { transform: translateX(-20px); opacity: 0; }
-    to { transform: translateX(0); opacity: 1; }
-}
+    @keyframes slideInLeft {
+        from { transform: translateX(-20px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
 
     .header-main {
         box-shadow: 0 2px 15px rgba(0,0,0,0.1);
@@ -133,5 +133,94 @@
 
     .btn-premium:hover {
         transform: translateY(-2px);
+    }
+
+    /* Mobile Optimizations */
+    @media (max-width: 991px) {
+        .navbar-brand {
+            max-width: 80%;
+            font-size: 0.9rem;
+        }
+
+        .logo-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .logo-text .tagline {
+            display: none;
+        }
+
+        .navbar-toggler {
+            padding: 0.3rem 0.6rem;
+            border-color: rgba(241, 196, 15, 0.5);
+        }
+
+        .navbar-toggler-icon {
+            width: 1.2em;
+            height: 1.2em;
+        }
+
+        .nav-link {
+            padding: 0.75rem 1rem !important;
+            font-size: 0.95rem;
+        }
+
+        .dropdown-menu {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: none;
+            margin-left: 1rem;
+            width: calc(100% - 2rem);
+        }
+
+        .dropdown-item {
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-premium {
+            width: 100%;
+            margin: 1rem 0;
+            padding: 0.75rem 1rem;
+            border-radius: 25px;
+        }
+
+        .navbar-nav {
+            margin-top: 0.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 0.5rem;
+        }
+
+        .nav-link::after {
+            display: none;
+        }
+
+        .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .navbar-brand {
+            font-size: 0.8rem;
+        }
+
+        .logo-text {
+            line-height: 1.1;
+        }
+
+        .logo-highlight {
+            display: block;
+            margin-top: 2px;
+        }
+
+        .btn-premium {
+            font-size: 0.9rem;
+        }
     }
 </style>
